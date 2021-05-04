@@ -1,0 +1,21 @@
+type Query {
+  user(id: ID!): User!
+  users: [User!]!
+}
+
+type User {
+  id: ID!
+  name: String!
+  password: String!
+  birth: Int
+  type: String!
+  books: [Book!]!
+}
+
+type Mutation {
+  addUser(name: String!, password: String!, birth: Int, type: String!): Token!
+  deleteUser(id: ID!): User!
+  updateUserName(name: String!, id: ID!): User!
+  signIn(name: String!, password: String!): Token!
+  getBook(book_id: ID!,user_id: ID!): User!
+}

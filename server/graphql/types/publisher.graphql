@@ -1,0 +1,14 @@
+type Query {
+  publisher(id: ID!): Publisher!
+  publishers: [Publisher]
+}
+
+type Publisher {
+  id: ID!
+  name: String!
+}
+
+type Mutation {
+  addPublisher(name: String!): Publisher!
+  deletePublisher(id: ID!): Publisher
+}
