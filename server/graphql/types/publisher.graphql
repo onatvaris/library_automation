@@ -6,6 +6,7 @@ type Query {
 type Publisher {
   id: ID!
   name: String!
+  books: [Book]
 }
 
 type Mutation {

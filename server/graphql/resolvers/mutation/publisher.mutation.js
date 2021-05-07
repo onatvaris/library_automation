@@ -1,5 +1,6 @@
 module.exports = {
   addPublisher: async (source, { name }, { Publisher }) => {
+    // her yayıncının kitabı olmak zorunda =>  book_id
     const newPublisher = await new Publisher({
       name,
     }).save();

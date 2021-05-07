@@ -37,11 +37,4 @@ module.exports = {
 
     return { token: token.generete(user, "1h") };
   },
-
-  getBook: async (source, { book_id, user_id }, { User, Book }) => {
-    // user döndürücek
-    // id = bookid
-    const book = Book.findById(book_id);
-    const user = User.findById(user_id);
-  },
 };

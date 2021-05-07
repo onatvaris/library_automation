@@ -8,9 +8,16 @@ type Book {
   title: String!
   description: String
   year: Int
+  publisher: Publisher!
 }
 
 type Mutation {
-  addBook(title: String!, description: String, year: Int): Book!
+  addBook(
+    title: String!
+    description: String
+    year: Int
+    publisher_id: ID!
+    user_id: ID
+  ): Book!
   deleteBook(id: ID!, title: String): Book
 }
