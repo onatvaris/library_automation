@@ -9,7 +9,6 @@ module.exports = {
       description,
       year,
       publisher_id,
-      user_id,
     }).save();
 
     return newBook;
@@ -20,12 +19,5 @@ module.exports = {
     await Book.deleteOne({ _id: id });
 
     return book;
-  },
-
-  getBook: async (source, { book_id, user_id }, { User, Book }) => {
-    const b = Book.findById(book_id);
-    await b.items.push(user_id);
-    const savedTransaction = await b.save();
-    return savedTransaction;
   },
 };

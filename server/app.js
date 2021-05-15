@@ -6,6 +6,7 @@ require("dotenv").config();
 const User = require("./models/User");
 const Book = require("./models/Book");
 const Publisher = require("./models/Publisher");
+const Lending = require("./models/Lending");
 
 const resolvers = require("./graphql/resolvers");
 
@@ -20,6 +21,7 @@ const server = new ApolloServer({
     User,
     Book,
     Publisher,
+    Lending,
   },
 });
 

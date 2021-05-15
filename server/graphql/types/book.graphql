@@ -9,6 +9,7 @@ type Book {
   description: String
   year: Int
   publisher: Publisher!
+  users: [User!]
 }
 
 type Mutation {
@@ -17,7 +18,6 @@ type Mutation {
     description: String
     year: Int
     publisher_id: ID!
-    user_id: ID
   ): Book!
   deleteBook(id: ID!, title: String): Book
 }

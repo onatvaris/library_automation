@@ -15,5 +15,9 @@ const Query = {
   publisher: async (source, args, { Publisher }) => {
     return await Publisher.findById(args.id);
   },
+  lenders: async (source, args, { Lending }) => Lending.find({}),
+  lending: async (source, args, { Lending }) => {
+    return await Lending.findById(args.id);
+  },
 };
 module.exports = Query;

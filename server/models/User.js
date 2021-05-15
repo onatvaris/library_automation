@@ -19,9 +19,6 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  book_id: {
-    type: Schema.ObjectId,
-  },
 });
 
 // üye kayıt olurken tetikleniyor

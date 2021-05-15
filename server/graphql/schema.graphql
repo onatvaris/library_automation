@@ -8,4 +8,7 @@
 #import Query from './types/publisher.graphql'
 #import Mutation from './types/publisher.graphql'
 
+#import Query from './types/lending.graphql'
+#import Mutation from './types/lending.graphql'
+
 # import Token from './types/token.graphql'

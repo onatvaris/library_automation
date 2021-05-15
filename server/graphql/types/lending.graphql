@@ -1,0 +1,27 @@
+scalar Date
+
+type Query {
+  lenders: [Lending]
+  lending(id: ID!): Lending!
+}
+
+type Lending {
+  id: ID!
+  book_id: ID!
+  user_id: ID!
+  lendDate: Date!
+  expectedReturnDate: Date
+  returnDate: Date
+}
+
+type Mutation {
+  getBook(
+    book_id: ID!
+    user_id: ID!
+    lendDate: Date!
+    expectedReturnDate: Date
+    returnDate: Date
+  ): Lending!
+
+  deleteLending(user_id: ID!, book_id: ID!): Lending!
+}
